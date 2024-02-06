@@ -3,6 +3,10 @@ use crate::calculation::calculation;
 
 pub mod loop_f;
 use crate::loop_f::test_for_loop::test_for_loop;
+use crate::loop_f::test_while_loop::test_while_loop;
+
+pub mod fibonacci;
+use crate::fibonacci::fibonacci;
 
 fn main(){
    let z = calculation(1, 2, 3);
@@ -19,6 +23,9 @@ println!("The value of check is: {check}");
 
 let test_loop = test_for_loop(0);
 println!("The value of test_loop is: {test_loop}");
+
+let test_while_loop = test_while_loop(200);
+println!("The value of while_loop is: {test_while_loop}");
 }
 
 fn string_test()-> String{
@@ -34,13 +41,6 @@ fn string_test()-> String{
     test_sentence.push_str(" from ");
     test_sentence.push_str(planet);
     test_sentence
-}
-
-fn fibonacci(n: i32) -> i32 {
-    if n <= 1 {
-        return n;
-    }
-    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 fn check_if_else(x: i64) -> String{
