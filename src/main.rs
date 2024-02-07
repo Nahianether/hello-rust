@@ -56,6 +56,18 @@ let collatz_sequence = collatz_sequence(15);
 println!("Collatz sequence result from main: {collatz_sequence}");
 
 println!("--------------------------------------------------");
+
+array_test();
+
+println!("--------------------------------------------------");
+
+tuple_test();
+
+println!("--------------------------------------------------");
+
+tuple_array_test();
+
+println!("--------------------------------------------------");
 }
 
 fn string_test()-> String{
@@ -81,4 +93,22 @@ fn check_if_else(x: i64) -> String{
    }else {
       return "equal to 10".to_string();
    }
+}
+
+fn array_test(){
+   let mut a: [i8; 10] = [42; 10];
+    a[5] = 0;
+    println!("a: {a:?}");
+}
+
+fn tuple_test(){
+   let t: (i8, bool) = (7, true);
+    println!("t.0: {}", t.0);
+    println!("t.1: {}", t.1);
+}
+
+fn tuple_array_test(){
+   let mut t: [(i8, bool); 10] = [(7, true); 10];
+   t[5] = (10, false);
+   println!("t: {t:?}");
 }
