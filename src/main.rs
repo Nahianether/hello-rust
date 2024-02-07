@@ -8,24 +8,46 @@ use crate::loop_f::test_while_loop::test_while_loop;
 pub mod fibonacci;
 use crate::fibonacci::fibonacci;
 
+pub mod scope_and_shadowing;
+use crate::scope_and_shadowing::scope_and_shadowing::scope_and_shadowing;
+
 fn main(){
-   let z = calculation(1, 2, 3);
+println!("--------------------------------------------------");
+
+let z = calculation(1, 2, 3);
 println!("The value of z is: {z}");
+
+println!("--------------------------------------------------");
 
 let test_sentence = string_test();
 println!("The value of test_sentence is: {test_sentence}");
 
+println!("--------------------------------------------------");
+
 let fib = fibonacci(10);
 println!("The value of fib is: {fib}");
+
+println!("--------------------------------------------------");
 
 let check = check_if_else(10);
 println!("The value of check is: {check}");
 
+println!("--------------------------------------------------");
+
 let test_loop = test_for_loop(0);
 println!("The value of test_loop is: {test_loop}");
 
+println!("--------------------------------------------------");
+
 let test_while_loop = test_while_loop(200);
 println!("The value of while_loop is: {test_while_loop}");
+
+println!("--------------------------------------------------");
+
+let scope_and_shadowing = scope_and_shadowing(10);
+println!("Scope and shadowing result from main: {scope_and_shadowing}");
+
+println!("--------------------------------------------------");
 }
 
 fn string_test()-> String{
