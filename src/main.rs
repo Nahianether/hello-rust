@@ -11,6 +11,9 @@ use crate::fibonacci::fibonacci;
 pub mod scope_and_shadowing;
 use crate::scope_and_shadowing::scope_and_shadowing::scope_and_shadowing;
 
+pub mod collatz_sequence;
+use crate::collatz_sequence::collatz_sequence::collatz_sequence;
+
 fn main(){
 println!("--------------------------------------------------");
 
@@ -46,6 +49,11 @@ println!("--------------------------------------------------");
 
 let scope_and_shadowing = scope_and_shadowing(10);
 println!("Scope and shadowing result from main: {scope_and_shadowing}");
+
+println!("--------------------------------------------------");
+
+let collatz_sequence = collatz_sequence(15);
+println!("Collatz sequence result from main: {collatz_sequence}");
 
 println!("--------------------------------------------------");
 }
