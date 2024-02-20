@@ -14,6 +14,17 @@ use crate::scope_and_shadowing::scope_and_shadowing::scope_and_shadowing;
 pub mod collatz_sequence;
 use crate::collatz_sequence::collatz_sequence::collatz_sequence;
 
+pub mod array_tupple;
+use crate::array_tupple::array::array_test;
+use crate::array_tupple::tupple::tuple_test;
+use crate::array_tupple::tupple_array::tuple_array_test;
+use crate::array_tupple::nested_array::nested_array::nested_array_test;
+
+
+
+
+
+
 fn main(){
 println!("--------------------------------------------------");
 
@@ -68,6 +79,17 @@ println!("--------------------------------------------------");
 tuple_array_test();
 
 println!("--------------------------------------------------");
+
+let matrix_array = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+let output = nested_array_test(matrix_array);
+println!("Nested array result from main: {:#?}", output);
+
+
+println!("--------------------------------------------------");
 }
 
 fn string_test()-> String{
@@ -93,22 +115,4 @@ fn check_if_else(x: i64) -> String{
    }else {
       return "equal to 10".to_string();
    }
-}
-
-fn array_test(){
-   let mut a: [i8; 10] = [42; 10];
-    a[5] = 0;
-    println!("a: {a:?}");
-}
-
-fn tuple_test(){
-   let t: (i8, bool) = (7, true);
-    println!("t.0: {}", t.0);
-    println!("t.1: {}", t.1);
-}
-
-fn tuple_array_test(){
-   let mut t: [(i8, bool); 10] = [(7, true); 10];
-   t[5] = (10, false);
-   println!("t: {t:?}");
 }
