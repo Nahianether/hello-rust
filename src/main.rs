@@ -23,7 +23,6 @@ use crate::array_tupple::nested_array::nested_array::nested_array_test;
 pub mod references;
 use crate::references::shared_refrences::shared_references_fn;
 use crate::references::exclusive_references::exclusive_references_fn;
-use crate::references::exclusive_geometry::exclusive_geometry_fn;
 
 
 
@@ -99,10 +98,6 @@ shared_references_fn();
 println!("--------------------------------------------------");
 
 exclusive_references_fn();
-
-println!("--------------------------------------------------");
-
-exclusive_geometry_fn();
 
 println!("--------------------------------------------------");
 }
