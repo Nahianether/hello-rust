@@ -1,0 +1,1 @@
+pub fn type_aliases_fn(){}

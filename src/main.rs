@@ -24,6 +24,13 @@ pub mod references;
 use crate::references::shared_refrences::shared_references_fn;
 use crate::references::exclusive_references::exclusive_references_fn;
 
+pub mod type_defined;
+use crate::type_defined::named_structs::named_structs_fn;
+use crate::type_defined::tuple_structs::tuple_structs_fn;
+use crate::type_defined::enums::enums_fn;
+use crate::type_defined::static_and_const::static_and_const_fn;
+use crate::type_defined::type_aliases::type_aliases_fn;
+
 
 
 
@@ -99,6 +106,11 @@ println!("--------------------------------------------------");
 
 exclusive_references_fn();
 
+println!("--------------------------------------------------");
+println!("--------------------------------------------------");
+println!("--------------------------------------------------");
+println!("--------------------------------------------------");
+println!("--------------------------------------------------");
 println!("--------------------------------------------------");
 }
 

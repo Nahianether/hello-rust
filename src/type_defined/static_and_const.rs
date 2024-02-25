@@ -1,0 +1,1 @@
+pub fn static_and_const_fn(){}
