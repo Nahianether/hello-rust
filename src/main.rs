@@ -20,7 +20,10 @@ use crate::array_tupple::tupple::tuple_test;
 use crate::array_tupple::tupple_array::tuple_array_test;
 use crate::array_tupple::nested_array::nested_array::nested_array_test;
 
-
+pub mod references;
+use crate::references::shared_refrences::shared_references_fn;
+use crate::references::exclusive_references::exclusive_references_fn;
+use crate::references::exclusive_geometry::exclusive_geometry_fn;
 
 
 
@@ -88,6 +91,18 @@ let matrix_array = [
 let output = nested_array_test(matrix_array);
 println!("Nested array result from main: {:#?}", output);
 
+
+println!("--------------------------------------------------");
+
+shared_references_fn();
+
+println!("--------------------------------------------------");
+
+exclusive_references_fn();
+
+println!("--------------------------------------------------");
+
+exclusive_geometry_fn();
 
 println!("--------------------------------------------------");
 }
